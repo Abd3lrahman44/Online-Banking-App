@@ -17,6 +17,16 @@ A secure, user-friendly online banking web application built with Flask, featuri
 
 ---
 
+## 📷 Screenshots
+
+### 🔐 Login Page
+![Landing Page](screenshots/Landing.png)
+
+### 📊 User Dashboard
+![Dashboard](screenshots/Dashboard.png)
+
+---
+
 ## Technology Stack
 
 - **Backend:** Python, Flask
