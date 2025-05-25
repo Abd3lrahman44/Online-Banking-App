@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>{% block title %}Online Banking{% endblock %}</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <h1>Welcome to Our Online Banking System</h1>
+  </header>
+
+  <nav>
+    <a href="/">Home</a>
+    <a href="/features">Features</a>
+    <a href="/security">Security</a>
+    <a href="/tech">Tech</a>
+    <a href="/register">Register</a>
+    {% if session.token %}
+      <a href="/dashboard">Dashboard</a>
+      <a href="/logout">Logout</a>
+    {% else %}
+      <a href="/login">Login</a>
+    {% endif %}
+  </nav>
+
+  <div class="container">
+    {% block content %}{% endblock %}
+  </div>
+
+  <footer>
+    <p>© 2022 Online Banking System</p>
+	<p><strong>Developed by: @Abd3lrahman44</strong></p>
+  </footer>
+</body>
+</html>
